@@ -1,0 +1,3 @@
+kullanılacak paket dosya bazlı olarak çalışacağı için bu şekilde indirilmeli.
+
+Githubdan java projesi indirilirse ilk olarak npm install yapılmalı

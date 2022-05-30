@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <title>Exchange API</title>
+    
+</head>
+<body>
+    <div class="container">
+            <div class="row">
+                <div class="col s8">
+                    <div id="main" class="card">
+                        <div class="card-content">
+                            <span class="card-title">Exchange API - Currency App</span>
+                            <div class="row">
+                                <form id="currency-form"></form>
+                                    <div class="input-field col s8">
+                                        <input type="number" name="amount" id="amount" placeholder="Miktar">
+                                        
+                                    </div>
+
+                                    <div class="input-field col s8">
+                                            <div class="select-wrapper"><input class="select-dropdown dropdown-trigger" type="text" readonly="true" data-target="select-options-f95e6d01-3876-8c07-5520-fc417c7d5919"><ul id="select-options-f95e6d01-3876-8c07-5520-fc417c7d5919" class="dropdown-content select-dropdown" tabindex="0"><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d59190" tabindex="0" class="selected"><span>USD</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d59191" tabindex="0"><span>EUR</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d59192" tabindex="0"><span>JPY</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d59193" tabindex="0"><span>BGN</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d59194" tabindex="0"><span>CZK</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d59195" tabindex="0"><span>DKK</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d59196" tabindex="0"><span>GBP</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d59197" tabindex="0"><span>HUF</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d59198" tabindex="0"><span>PLN</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d59199" tabindex="0"><span>RON</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591910" tabindex="0"><span>SEK</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591911" tabindex="0"><span>CHF</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591912" tabindex="0"><span>ISK</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591913" tabindex="0"><span>NOK</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591914" tabindex="0"><span>HRK</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591915" tabindex="0"><span>RUB</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591916" tabindex="0"><span>TRY</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591917" tabindex="0"><span>AUD</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591918" tabindex="0"><span>BRL</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591919" tabindex="0"><span>CAD</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591920" tabindex="0"><span>CNY</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591921" tabindex="0"><span>HKD</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591922" tabindex="0"><span>IDR</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591923" tabindex="0"><span>ILS</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591924" tabindex="0"><span>INR</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591925" tabindex="0"><span>KRW</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591926" tabindex="0"><span>MXN</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591927" tabindex="0"><span>MYR</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591928" tabindex="0"><span>NZD</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591929" tabindex="0"><span>PHP</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591930" tabindex="0"><span>SGD</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591931" tabindex="0"><span>THB</span></li><li id="select-options-f95e6d01-3876-8c07-5520-fc417c7d591932" tabindex="0"><span>ZAR</span></li></ul><svg class="caret" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><select id="firstCurrency" tabindex="-1">
+                                              
+                                                <option selected="">USD</option>
+                                                <option>EUR</option>
+                                                <option>JPY</option>
+                                                <option>BGN</option>
+                                                <option>CZK</option>
+                                                <option>DKK</option>
+                                                <option>GBP</option>          
+                                                <option>HUF</option>
+                                                <option>PLN</option>
+                                                <option>RON</option>
+                                                <option>SEK</option>
+                                                <option>CHF</option>
+                                                <option>ISK</option>
+                                                <option>NOK</option>          
+                                                <option>HRK</option>
+                                                <option>RUB</option>
+                                                <option>TRY</option>
+                                                <option>AUD</option>
+                                                <option>BRL</option>          
+                                                <option>CAD</option>
+                                                <option>CNY</option>
+                                                <option>HKD</option>
+                                                <option>IDR</option>          
+                                                <option>ILS</option>
+                                                <option>INR</option>
+                                                <option>KRW</option>
+                                                <option>MXN</option>          
+                                                <option>MYR</option>
+                                                <option>NZD</option>
+                                                <option>PHP</option>
+                                                <option>SGD</option>
+                                                <option>THB</option>          
+                                                <option>ZAR</option>
+                                            </select></div>
+
+                                            <div class="select-wrapper"><input class="select-dropdown dropdown-trigger" type="text" readonly="true" data-target="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a468"><ul id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a468" class="dropdown-content select-dropdown" tabindex="0"><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a4680" tabindex="0"><span>USD</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a4681" tabindex="0"><span>EUR</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a4682" tabindex="0"><span>JPY</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a4683" tabindex="0"><span>BGN</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a4684" tabindex="0"><span>CZK</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a4685" tabindex="0"><span>DKK</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a4686" tabindex="0"><span>GBP</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a4687" tabindex="0"><span>HUF</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a4688" tabindex="0"><span>PLN</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a4689" tabindex="0"><span>RON</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46810" tabindex="0"><span>SEK</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46811" tabindex="0"><span>CHF</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46812" tabindex="0"><span>ISK</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46813" tabindex="0"><span>NOK</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46814" tabindex="0"><span>HRK</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46815" tabindex="0"><span>RUB</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46816" tabindex="0" class="selected"><span>TRY</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46817" tabindex="0"><span>AUD</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46818" tabindex="0"><span>BRL</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46819" tabindex="0"><span>CAD</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46820" tabindex="0"><span>CNY</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46821" tabindex="0"><span>HKD</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46822" tabindex="0"><span>IDR</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46823" tabindex="0"><span>ILS</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46824" tabindex="0"><span>INR</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46825" tabindex="0"><span>KRW</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46826" tabindex="0"><span>MXN</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46827" tabindex="0"><span>MYR</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46828" tabindex="0"><span>NZD</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46829" tabindex="0"><span>PHP</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46830" tabindex="0"><span>SGD</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46831" tabindex="0"><span>THB</span></li><li id="select-options-bf30919f-6b5a-b67e-5e73-c2038db6a46832" tabindex="0"><span>ZAR</span></li></ul><svg class="caret" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg><select id="secondCurrency" tabindex="-1">
+                                              
+                                                <option>USD</option>
+                                                <option>EUR</option>
+                                                <option>JPY</option>
+                                                <option>BGN</option>
+                                                <option>CZK</option>
+                                                <option>DKK</option>
+                                                <option>GBP</option>          
+                                                <option>HUF</option>
+                                                <option>PLN</option>
+                                                <option>RON</option>
+                                                <option>SEK</option>
+                                                <option>CHF</option>
+                                                <option>ISK</option>
+                                                <option>NOK</option>          
+                                                <option>HRK</option>
+                                                <option>RUB</option>
+                                                <option selected="">TRY</option>
+                                                <option>AUD</option>
+                                                <option>BRL</option>          
+                                                <option>CAD</option>
+                                                <option>CNY</option>
+                                                <option>HKD</option>
+                                                <option>IDR</option>          
+                                                <option>ILS</option>
+                                                <option>INR</option>
+                                                <option>KRW</option>
+                                                <option>MXN</option>          
+                                                <option>MYR</option>
+                                                <option>NZD</option>
+                                                <option>PHP</option>
+                                                <option>SGD</option>
+                                                <option>THB</option>          
+                                                <option>ZAR</option>
+                                            </select></div>
+                                            
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                          
+                          <span class="card-title" id="outputFirst">USD</span>
+                          <span>-</span>
+                          <span class="card-title" id="outputSecond">TRY</span>
+                          
+                        </div>
+                        <div class="card-content">
+                            <input type="text" name="outputResult" id="outputResult" placeholder="Sonuç" readonly="">
+
+                        </div>
+                      </div>
+                </div>
+            </div>
+            
+
+    </div>
+    
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
+          });
+</script>
+
+<script src="ui.js"></script>
+<script src="currency.js"></script>
+<script src="app.js"></script>
+
+
+</body>
+</html>
